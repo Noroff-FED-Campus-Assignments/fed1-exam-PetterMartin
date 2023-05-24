@@ -54,15 +54,15 @@ async function getMovies() {
               </div>
             </div>
             <div class="text ${rightContainerClass}">
-              <h1 class="h1">${post.fields["Long Text"]}</h1>
-              <p class="hero-text">Last summer, advertising photographer Jason Perry traveled to Ukraine to provide supplies for civilians amidst the Russian invasion. When travel challenges left him stranded in Amsterdam, his search for ground travel led him to Zeilen Van Vrijheid—a Dutch volunteer team with convoys of ambulances equipped with medical supplies to support doctors in Ukraine.</p>
+              <h1 class="h1">${post.fields["Single line"]}</h1>
+              <p class="hero-text">${post.fields["Long Text"]}</p>
               <div class="btn-group">
                 <a href="details.html" class="btn btn-secondary"><span>READ STORY</span></a>
               </div>
               <div class="date-category-container">
-                <p class="date">Jan 17, 2022</p>
+                <p class="date">${post.fields.Date}</p>
                 <div class="categories-secondary">
-                  <p>Trailers</p>
+                  <p>${post.fields.Category}</p>
                 </div>
               </div>
             </div>

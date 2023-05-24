@@ -1,14 +1,6 @@
-/* the props */
 /*-----------------------------------*\ 
   #style.css
 \*-----------------------------------*/
-
-/**
- * copyright 2022 @codewithsadee 
- */
-
-
-
 
 
 /*-----------------------------------*\ 
@@ -478,7 +470,7 @@
   .right-2 {
     flex: 0 0 50%;
     padding-right: 2rem;
-    font-size: 24px;
+    padding-left: 2rem;
   }
 
   .text.right-2 {
@@ -493,15 +485,14 @@
 
   .right-2 h1 {
     font-weight: 500;
-    line-height: 1.1;
-    margin-bottom: 2rem;
   }
   .hero-text {
     font-size: 16px;
+    margin-top: 1rem;
   }
 
   .btn-group {
-    margin-top: 30px; 
+    margin-top: 15px; 
   }
 
   .date-category-container {
