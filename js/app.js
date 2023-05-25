@@ -12,13 +12,13 @@ if (window.location.pathname === "/index.html") {
 } */
 
 
+
 // Load ENV;
 
 const token = import.meta.env.VITE_API_TOKEN;
 
 const url = "https://api.airtable.com/v0/appMZLXTCpDmiDkTh/tblnutZCCuHLWanGx";
 
-const movieContainer = document.querySelector(".hero-2");
 const myHeaders = new Headers();
 myHeaders.append("Authorization", `Bearer ${token}`);
 myHeaders.append(
@@ -33,51 +33,118 @@ const requestOptions = {
   redirect: "follow",
 };
 
+const categoryButtons = document.querySelectorAll('.categories-primary p');
+const movieContainer = document.querySelector('.hero-2');
+const heroSection = document.querySelector('.hero');
+
+categoryButtons.forEach((button) => {
+  button.addEventListener('click', (event) => {
+    const selectedCategory = event.target.textContent;
+    filterPostsByCategory(selectedCategory);
+  });
+});
+
+function filterPostsByCategory(category) {
+  const blogItems = movieContainer.children;
+
+  for (let i = 0; i < blogItems.length; i++) {
+    const blogItem = blogItems[i];
+    const postCategory = blogItem.querySelector('.categories-secondary p').textContent;
+
+    if (postCategory === category || category === 'All') {
+      blogItem.style.display = 'block';
+    } else {
+      blogItem.style.display = 'none';
+    }
+  }
+
+  // Remove the active class from all category buttons
+  categoryButtons.forEach((button) => {
+    button.classList.remove('active');
+  });
+
+  // Add the active class to the selected category button
+  const selectedButton = document.querySelector(`.categories-primary p[data-category="${category}"]`);
+  selectedButton.classList.add('active');
+
+  if (category === 'All') {
+    heroSection.style.display = 'block';
+  } else {
+    heroSection.style.display = 'none';
+  }
+}
+
+
 async function getMovies() {
   try {
     const response = await fetch(url, requestOptions);
     const result = await response.json();
     const posts = result.records;
-    console.log(posts);
-    if (movieContainer) {
-      let counter = 0;
-      posts.forEach((post) => {
-        const imageContainerClass = counter % 2 === 0 ? 'left-2' : 'right-2';
-        const rightContainerClass = counter % 2 === 0 ? 'right-2' : 'left-2';
-        const postReverse = counter % 2 === 0 ? 'flex-container' : 'flex-reverse';
 
-        movieContainer.innerHTML += `
-          <div class="${postReverse}">
-            <div class="${imageContainerClass}">
-              <div class="image-container">
-                <img src="${post.fields.Attachments[0].url}" alt="Your Image" class="hero-image">
-              </div>
-            </div>
-            <div class="text ${rightContainerClass}">
-              <h1 class="h1">${post.fields["Single line"]}</h1>
-              <p class="hero-text">${post.fields["Long Text"]}</p>
-              <div class="btn-group">
-                <a href="details.html" class="btn btn-secondary"><span>READ STORY</span></a>
-              </div>
-              <div class="date-category-container">
-                <p class="date">${post.fields.Date}</p>
-                <div class="categories-secondary">
-                  <p>${post.fields.Category}</p>
-                </div>
-              </div>
-            </div>
+    movieContainer.innerHTML = '';
+
+    let counter = 0;
+    posts.forEach((post) => {
+      const imageContainerClass = counter % 2 === 0 ? 'left-2' : 'right-2';
+      const rightContainerClass = counter % 2 === 0 ? 'right-2' : 'left-2';
+      const postReverse = counter % 2 === 0 ? 'flex-container' : 'flex-reverse';
+
+      const blogItem = document.createElement('div');
+      blogItem.className = `${postReverse} text`;
+
+      blogItem.innerHTML = `
+      <div class="${postReverse} text">
+      <div class="${imageContainerClass}">
+        <div class="image-container">
+          <img src="${post.fields.Attachments[0].url}" alt="Your Image" class="hero-image">
+        </div>
+      </div>
+      <div class="text ${rightContainerClass}">
+        <h1 class="h1">${post.fields["Single line"]}</h1>
+        <p class="hero-text">${post.fields["Long Text"]}</p>
+        <div class="btn-group">
+          <a href="details.html?id=${post.id}" class="btn btn-secondary"><span>READ STORY</span></a>
+        </div>
+        <div class="date-category-container">
+          <p class="date">${post.fields.Date}</p>
+          <div class="categories-secondary">
+            <p>${post.fields.Category}</p>
           </div>
-        `;
+        </div>
+      </div>
+    </div>
+  `;
 
-        counter++;
-      });
-    }
+
+      movieContainer.appendChild(blogItem);
+
+      counter++;
+    });
+
+    // After adding new posts, filter them based on the current selected category
+    const activeCategory = document.querySelector('.categories-primary p.active');
+    const selectedCategory = activeCategory ? activeCategory.textContent : 'All';
+
+    // Add the active class to the selected category button
+    categoryButtons.forEach((button) => {
+      if (button.textContent === selectedCategory) {
+        button.classList.add('active');
+      } else {
+        button.classList.remove('active');
+      }
+    });
+
+    filterPostsByCategory(selectedCategory);
   } catch (error) {
     console.log(error);
   }
 }
 
 getMovies();
+
+
+
+
 
 /*
 <div class="flex-container">
