@@ -1,16 +1,3 @@
-/*const homeIcon = document.getElementById("home");
-const aboutIcon = document.getElementById("about");
-const contactIcon = document.getElementById("contact");
-
-
-if (window.location.pathname === "/index.html") {
-  homeIcon.classList.add("active");
-} else if (window.location.pathname === "/about.html") {
-  aboutIcon.classList.add("active");
-} else if (window.location.pathname === "/contact.html") {
-  contactIcon.classList.add("active");
-} */
-
 
 
 // Load ENV;
@@ -72,6 +59,16 @@ function filterPostsByCategory(category) {
   } else {
     heroSection.style.display = 'none';
   }
+
+  // Hide the "Latest" div
+  const latestDiv = document.querySelector('.latest');
+  latestDiv.style.display = 'none';
+
+  // Remove the "show more" button
+  const showMoreButton = document.getElementById('showMoreButton');
+  if (showMoreButton) {
+    showMoreButton.style.display = 'none';
+  }
 }
 
 
@@ -112,6 +109,7 @@ async function getMovies() {
           </div>
         </div>
       </div>
+      <dialog closed class="click-image"></dialog> 
     </div>
   `;
 
@@ -140,7 +138,31 @@ async function getMovies() {
   }
 }
 
-getMovies();
+if (movieContainer) {
+  await getMovies();
+  const imageModal = document.querySelector(".click-image");
+  const postImages = document.querySelectorAll(".image-container");
+  postImages.forEach((image) => {
+    image.addEventListener("click", function () {
+      imageModal.innerHTML = this.innerHTML;
+      imageModal.showModal();
+      imageModal.addEventListener("click", () => {
+        imageModal.close();
+      });
+    });
+  });
+}
+
+// Loader;
+window.addEventListener("load", () => {
+  const loader = document.querySelector(".loader");
+
+  loader.classList.add("loader--hidden");
+
+  loader.addEventListener("transitionend", () => {
+    document.body.removeChild(loader);
+  });
+});
 
 
 

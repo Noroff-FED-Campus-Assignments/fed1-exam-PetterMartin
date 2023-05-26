@@ -178,6 +178,13 @@
     transition: transform 0.4s ease;
   }
 
+  .show-group {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3rem;
+  }
+  
+
   .categories {
     display: flex;
     justify-content: space-between;
@@ -260,7 +267,45 @@
   
   .dark-theme .aside .h2 { color: var(--foreground-primary); }
   
+  /*-----------------------------------*\ 
+    #LOADER
+  \*-----------------------------------*/
   
+  .loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.75s, visibility 0.75s;
+  }
+  
+  .loader--hidden {
+    opacity: 0;
+    visibility: hidden;
+  }
+  
+  .loader::after {
+    content: "";
+    width: 75px;
+    height: 75px;
+    border: 15px solid #dddddd;
+    border-top-color: #DD222B;
+    border-radius: 50%;
+    animation: loading 0.75s ease infinite;
+  }
+  
+  @keyframes loading {
+    from {
+      transform: rotate(0turn);
+    }
+    to {
+      transform: rotate(1turn);
+    }
+  }
   
   /*-----------------------------------*\ 
     #HEADER
@@ -504,6 +549,7 @@
   .hero {
   position: relative;
   padding: 4rem;
+  margin-bottom: 1rem;
   text-align: center;
   background-image: url(Images/Oppenheimer.webp);
   background-repeat: no-repeat;
@@ -554,13 +600,17 @@
   .flex-container {
     display: flex;
     flex-wrap: wrap;
-    padding: 1.5rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-right: 1.5rem;
   }
 
   .flex-reverse {
     display: flex;
     flex-direction: row-reverse;
-    padding: 1.5rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 1.5rem;
   }
 
   .left-2 {
@@ -1224,6 +1274,7 @@
       justify-content: center;
       text-transform: uppercase;
       color: #221F20;
+      min-height: 60vh;
     }
     
     .contact-container h1 {
@@ -1239,8 +1290,8 @@
       align-items: center;
       width: 800px;
       padding: 2rem;
-      margin-bottom: 5rem;
       border: 2px solid #221F20;
+      margin-bottom: 1rem;
     }
     
     form {

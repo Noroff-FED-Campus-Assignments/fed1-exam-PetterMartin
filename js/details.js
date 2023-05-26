@@ -50,11 +50,13 @@ async function getPost() {
     }
   } catch (error) {
     console.log(error);
+    const errorContainer = document.querySelector('.error-container');
+    errorContainer.innerHTML = 'An error occurred while loading the details. Please try again later.';
   }
 }
 
 if (detailsContainer) {
-  getPost();
+  await getPost();
   const imageModal = document.querySelector(".click-image");
   const postImages = document.querySelectorAll(".image-container");
   postImages.forEach((image) => {
