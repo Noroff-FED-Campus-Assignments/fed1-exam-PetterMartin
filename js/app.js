@@ -256,20 +256,28 @@ function sortPostsByName(sortOrder) {
 
 
 
-if (movieContainer) {
-  getMovies();
-  const imageModal = document.querySelector(".click-image");
-  const postImages = document.querySelectorAll(".image-container");
-  postImages.forEach((image) => {
-    image.addEventListener("click", function () {
-      imageModal.innerHTML = this.innerHTML;
-      imageModal.showModal();
-      imageModal.addEventListener("click", () => {
-        imageModal.close();
+async function loadPostImages() {
+  const detailsContainer = document.querySelector(".details-container");
+
+  if (detailsContainer) {
+    await getMovies();
+
+    const imageModal = document.querySelector(".click-image");
+    const postImages = document.querySelectorAll(".image-container");
+
+    postImages.forEach((image) => {
+      image.addEventListener("click", function () {
+        imageModal.innerHTML = this.innerHTML;
+        imageModal.showModal();
+        imageModal.addEventListener("click", () => {
+          imageModal.close();
+        });
       });
     });
-  });
+  }
 }
+
+loadPostImages();
 
 
 
