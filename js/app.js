@@ -257,7 +257,7 @@ function sortPostsByName(sortOrder) {
 
 
 if (movieContainer) {
-  await getMovies();
+  getMovies();
   const imageModal = document.querySelector(".click-image");
   const postImages = document.querySelectorAll(".image-container");
   postImages.forEach((image) => {
