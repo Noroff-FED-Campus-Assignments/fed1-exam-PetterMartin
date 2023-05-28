@@ -21,7 +21,6 @@ async function getPost() {
   try {
     const response = await fetch(url + `/${id}`, requestOptions);
     const result = await response.json();
-    console.log(result);
 
     if (detailsContainer) {
       const details = document.querySelector('.details');
@@ -49,7 +48,6 @@ async function getPost() {
       `;
     }
   } catch (error) {
-    console.log(error);
     const errorContainer = document.querySelector('.error-container');
     errorContainer.innerHTML = 'An error occurred while loading the details. Please try again later.';
   }

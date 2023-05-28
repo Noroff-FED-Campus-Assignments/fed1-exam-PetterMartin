@@ -41,7 +41,7 @@ magnifyingGlass.addEventListener('click', () => {
   searchButton.textContent = 'Search';
 
   const sortSelect = document.createElement('select');
-  sortSelect.classList.add('search-bar-input'); // Apply same styling as search bar input
+  sortSelect.classList.add('search-bar-input'); 
 
   const optionAsc = document.createElement('option');
   optionAsc.value = 'asc';
@@ -71,7 +71,7 @@ magnifyingGlass.addEventListener('click', () => {
 
   sortSelect.addEventListener('change', () => {
     const selectedOption = sortSelect.value;
-    filterPostsBySearchTerm(searchInput.value.trim()); // Trigger search with current search term
+    filterPostsBySearchTerm(searchInput.value.trim()); 
     sortPostsByName(selectedOption);
   });
 });

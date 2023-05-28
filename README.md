@@ -130,14 +130,14 @@ Make sure you go through this checklist before submitting your project to Moodle
 - [#] Named all images properly.
 - [#] Committed all my code to github.
 - [#] My repo is publically viewable.
-- [ ] I've submitted/ written a report.
+- [#] I've submitted/ written a report.
 - [#] I've removed all todo notes in code.
-- [ ] I've removed all console logs in code.
-- [ ] Code is formatted correctly.
-- [ ] There are no red underlines in VSCode.
-- [ ] There are no error messages in the terminal when I run the project.
-- [ ] My code is indented correctly.
-- [ ] I've checked my report for grammer & spelling using grammerly or chatGPT
+- [#] I've removed all console logs in code.
+- [#] Code is formatted correctly.
+- [#] There are no red underlines in VSCode.
+- [#] There are no error messages in the terminal when I run the project.
+- [#] My code is indented correctly.
+- [#] I've checked my report for grammer & spelling using grammerly or chatGPT
 - [ ] I've used used [conventional commits](https://www.conventionalcommits.org/en/v1.0.0/)
 - [ ] I've checked off every todo in this README.
 
