@@ -56,15 +56,16 @@ async function getPost() {
 }
 
 if (detailsContainer) {
-  getPost();
-  const imageModal = document.querySelector(".click-image");
-  const postImages = document.querySelectorAll(".image-container");
-  postImages.forEach((image) => {
-    image.addEventListener("click", function () {
-      imageModal.innerHTML = this.innerHTML;
-      imageModal.showModal();
-      imageModal.addEventListener("click", () => {
-        imageModal.close();
+  getPost().then(() => {
+    const imageModal = document.querySelector(".click-image");
+    const postImages = document.querySelectorAll(".image-container");
+    postImages.forEach((image) => {
+      image.addEventListener("click", function () {
+        imageModal.innerHTML = this.innerHTML;
+        imageModal.showModal();
+        imageModal.addEventListener("click", () => {
+          imageModal.close();
+        });
       });
     });
   });
