@@ -42,44 +42,44 @@ In the project directory, you can run:
 
 All of these todo's must be done to pass the asssignment.
 
-- [ ] A error message is present when the End-user encounters a error while viewing the index page.
-- [ ] A error message is present when the End-user encounters a error while viewing the details page.
-- [ ] As a customer I can view the title of the item on the browser tab for a details page.
-- [ ] As a customer I can view validation message when they input an incorrect name.
-- [ ] As a customer I can view validation message when they input an incorrect subject that is less than 15 characters.
-- [ ] As a customer I can view validation message when they input an incorrect Email address.
-- [ ] As a customer I can view a validation message when they input an incorrect physical address that is less than 25 characters long.
-- [ ] As a customer I want to be able to view the latest blog posts on the home page.
+- [#] A error message is present when the End-user encounters a error while viewing the index page.
+- [#] A error message is present when the End-user encounters a error while viewing the details page.
+- [#] As a customer I can view the title of the item on the browser tab for a details page.
+- [#] As a customer I can view validation message when they input an incorrect name.
+- [#] As a customer I can view validation message when they input an incorrect subject that is less than 15 characters.
+- [#] As a customer I can view validation message when they input an incorrect Email address.
+- [#] As a customer I can view a validation message when they input an incorrect physical address that is less than 25 characters long.
+- [#] As a customer I want to be able to view the latest blog posts on the home page.
 - [ ] As a customer, I want to see a list of the first 10 blog posts on the blog section, so that I can quickly scan through the content and decide which posts I want to read.
-- [ ] As a customer I want to be able to view a list of all blog posts on the blog section.
-- [ ] As a customer I want A responsive website that can be As a customer, I want to ensure that the website is responsive and accessible so that I can access it on any device and easily navigate through it using any accessibility tools I need.
-- [ ] As a customer, I want to see a clear and visually appealing design on the website, so that I can easily read the content and engage with the website.
-- [ ] As a customer, I want to see a carousel/slider on the home page to display the latest blog posts, so that I can quickly access and view the latest content.
-- [ ] As a customer, I want to be able to click on a blog post and be taken to a page with specific details about that post, so that I can get more in-depth information about the topic.
-- [ ] As a customer, I want to be able to click on images in a blog post and see a larger version in a modal, so that I can view images in greater detail.
-- [ ] As a customer, I want to be able to easily contact the website owners through a contact form, so that I can reach out with any questions or feedback.
-- [ ] As a customer, I want to see error messages when I fill out the contact form incorrectly, so that I can correct my mistakes and successfully submit my message.
+- [#] As a customer I want to be able to view a list of all blog posts on the blog section.
+- [#] As a customer I want A responsive website that can be As a customer, I want to ensure that the website is responsive and accessible so that I can access it on any device and easily navigate through it using any accessibility tools I need.
+- [#] As a customer, I want to see a clear and visually appealing design on the website, so that I can easily read the content and engage with the website.
+- [#] As a customer, I want to see a carousel/slider on the home page to display the latest blog posts, so that I can quickly access and view the latest content.
+- [#] As a customer, I want to be able to click on a blog post and be taken to a page with specific details about that post, so that I can get more in-depth information about the topic.
+- [#] As a customer, I want to be able to click on images in a blog post and see a larger version in a modal, so that I can view images in greater detail.
+- [#] As a customer, I want to be able to easily contact the website owners through a contact form, so that I can reach out with any questions or feedback.
+- [#] As a customer, I want to see error messages when I fill out the contact form incorrectly, so that I can correct my mistakes and successfully submit my message.
 
 ## End-user success criteria (Optional - 100%)
 
-- [ ] End-user can search for a specific item.
-- [ ] End-user can filter the list.
-- [ ] End-user can sort list by;
-  - [ ] Name ascending order
-  - [ ] Name descending order
-- [ ] Confirmation modal after custumer submits a successful contact form.
-- [ ] End-user can auto-fill the contact form using the browser auto-fill.
-- [ ] End-user can auto-fill the contact form using a password manager.
-- [ ] Validation still works when End-user uses copy and pastes into input fields.
+- [#] End-user can search for a specific item.
+- [#] End-user can filter the list.
+- [#] End-user can sort list by;
+  - [#] Name ascending order
+  - [#] Name descending order
+- [#] Confirmation modal after custumer submits a successful contact form.
+- [#] End-user can auto-fill the contact form using the browser auto-fill.
+- [#] End-user can auto-fill the contact form using a password manager.
+- [#] Validation still works when End-user uses copy and pastes into input fields.
 - [ ] End-user can see a postive feedback when they input correct info and pass validation.
-- [ ] End-user can experience pleasant animations.
+- [#] End-user can experience pleasant animations.
 - [ ] End-user needs to prove there are human using a captcha feature on the contact form.
   - [ ] Each item in the list has a staggered animation.
   - [ ] Contact form success modal fades in.
 - [ ] End-user can view a custom favicon.
-- [ ] CSS uses variables
-- [ ] Code is dry - There are no repeating functions, variables.
-- [ ] My commit messages are relavant and make sense. [How to write good commit messages](https://www.freecodecamp.org/news/how-to-write-better-git-commit-messages/)
+- [#] CSS uses variables
+- [#] Code is dry - There are no repeating functions, variables.
+- [#] My commit messages are relavant and make sense. [How to write good commit messages](https://www.freecodecamp.org/news/how-to-write-better-git-commit-messages/)
 - [ ] As a stakeholder, I want to view the website analytics.
 - [ ] As a stakeholder, I want to show my customers a disclamer on the website, so that they are aware of the terms and conditions of using the website.
 - [ ] As a customer, I want to ensure that my personal information submitted through the contact form is kept secure and not shared with any third-party entities.

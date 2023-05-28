@@ -1,5 +1,4 @@
 
-
 // Load ENV;
 
 const token = import.meta.env.VITE_API_TOKEN;
@@ -20,9 +19,67 @@ const requestOptions = {
   redirect: "follow",
 };
 
+
+
 const categoryButtons = document.querySelectorAll('.categories-primary p');
 const movieContainer = document.querySelector('.hero-2');
 const heroSection = document.querySelector('.hero');
+const magnifyingGlass = document.querySelector('.fa-magnifying-glass');
+
+magnifyingGlass.addEventListener('click', () => {
+  const searchResultsDiv = document.createElement('div');
+  searchResultsDiv.classList.add('search-results');
+
+  const searchBarDiv = document.createElement('div');
+  searchBarDiv.classList.add('search-bar');
+  
+  const searchInput = document.createElement('input');
+  searchInput.type = 'text';
+  searchInput.placeholder = 'Search...';
+
+  const searchButton = document.createElement('button');
+  searchButton.textContent = 'Search';
+
+  const sortSelect = document.createElement('select');
+  sortSelect.classList.add('search-bar-input'); // Apply same styling as search bar input
+
+  const optionAsc = document.createElement('option');
+  optionAsc.value = 'asc';
+  optionAsc.textContent = 'A-Z';
+
+  const optionDesc = document.createElement('option');
+  optionDesc.value = 'desc';
+  optionDesc.textContent = 'Z-A';
+
+  sortSelect.appendChild(optionAsc);
+  sortSelect.appendChild(optionDesc);
+
+  searchBarDiv.appendChild(searchInput);
+  searchBarDiv.appendChild(sortSelect);
+  searchBarDiv.appendChild(searchButton);
+
+  searchResultsDiv.appendChild(searchBarDiv);
+
+  heroSection.parentNode.insertBefore(searchResultsDiv, heroSection.nextSibling);
+
+  heroSection.remove();
+
+  searchButton.addEventListener('click', () => {
+    const searchTerm = searchInput.value.trim();
+    filterPostsBySearchTerm(searchTerm);
+  });
+
+  sortSelect.addEventListener('change', () => {
+    const selectedOption = sortSelect.value;
+    filterPostsBySearchTerm(searchInput.value.trim()); // Trigger search with current search term
+    sortPostsByName(selectedOption);
+  });
+});
+
+
+
+
+
 
 categoryButtons.forEach((button) => {
   button.addEventListener('click', (event) => {
@@ -73,6 +130,8 @@ function filterPostsByCategory(category) {
 
 
 async function getMovies() {
+  const errorContainer = document.querySelector('.error-container');
+  errorContainer.innerHTML = '';
   try {
     const response = await fetch(url, requestOptions);
     const result = await response.json();
@@ -113,6 +172,33 @@ async function getMovies() {
     </div>
   `;
 
+  const h3Elements = document.querySelectorAll(".blog-card .h3");
+  const blogTextElements = document.querySelectorAll(".blog-card .blog-text");
+
+  h3Elements.forEach((h3Element, index) => {
+  h3Element.textContent = posts[index].fields["Single line"];
+  });
+
+  blogTextElements.forEach((blogTextElement, index) => {
+  blogTextElement.textContent = posts[index].fields["Long Text"];
+  });
+
+  const blogCardElements = document.querySelectorAll(".blog-card");
+
+  blogCardElements.forEach((blogCardElement, index) => {
+  const { fields } = posts[index];
+
+  const imgElement = blogCardElement.querySelector(".blog-banner-img");
+  imgElement.src = fields.Attachments[0].url;
+
+  blogCardElement.querySelector(".date").textContent = fields["Date"];
+  blogCardElement.querySelector(".categories-secondary").textContent = fields["Category"];
+
+  const btnElement = blogCardElement.querySelector(".btn-group a");
+  btnElement.href = `details.html?id=${posts[index].id}`;
+
+});
+
 
       movieContainer.appendChild(blogItem);
 
@@ -135,8 +221,49 @@ async function getMovies() {
     filterPostsByCategory(selectedCategory);
   } catch (error) {
     console.log(error);
+    errorContainer.innerHTML = 'An error occurred while loading the movies. Please try again later.';
   }
 }
+
+function filterPostsBySearchTerm(searchTerm) {
+  const blogItems = movieContainer.children;
+
+  for (let i = 0; i < blogItems.length; i++) {
+    const blogItem = blogItems[i];
+    const postTitle = blogItem.querySelector('.h1').textContent.toLowerCase();
+
+    if (postTitle.includes(searchTerm.toLowerCase())) {
+      blogItem.style.display = 'block';
+    } else {
+      blogItem.style.display = 'none';
+    }
+  }
+}
+
+function sortPostsByName(sortOrder) {
+  const sortedBlogItems = Array.from(movieContainer.children).sort((a, b) => {
+    const titleA = a.querySelector('.h1').textContent.toLowerCase();
+    const titleB = b.querySelector('.h1').textContent.toLowerCase();
+    
+    if (sortOrder === 'asc') {
+      return titleA.localeCompare(titleB);
+    } else if (sortOrder === 'desc') {
+      return titleB.localeCompare(titleA);
+    }
+  });
+
+  // Remove existing blog items
+  while (movieContainer.firstChild) {
+    movieContainer.firstChild.remove();
+  }
+
+  // Append sorted blog items
+  sortedBlogItems.forEach((blogItem) => {
+    movieContainer.appendChild(blogItem);
+  });
+}
+
+
 
 if (movieContainer) {
   await getMovies();
@@ -152,17 +279,6 @@ if (movieContainer) {
     });
   });
 }
-
-// Loader;
-window.addEventListener("load", () => {
-  const loader = document.querySelector(".loader");
-
-  loader.classList.add("loader--hidden");
-
-  loader.addEventListener("transitionend", () => {
-    document.body.removeChild(loader);
-  });
-});
 
 
 

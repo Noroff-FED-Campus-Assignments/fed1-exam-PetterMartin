@@ -7,9 +7,9 @@
     <meta name="description" content="_REPLACE_WITH_DESCRIPTION_" />
     <meta
       name="keywords"
-      content="HTML, CSS, JavaScript, _REPLACE_WITH_KEYWORD_"
+      content="HTML, CSS, JavaScript"
     />
-    <meta name="author" content="_YOUR_NAME_" />
+    <meta name="petter" content="PETTER ÅNDERBAKK" />
     <link rel="stylesheet" href="style.css" />
     <!-- TODO: Import Javascript -->
     <title>Chat Cinema</title>
@@ -20,7 +20,7 @@
   <script src="https://kit.fontawesome.com/27c52b5e1c.js" crossorigin="anonymous"></script>
   </head>
 
-  <body class="light-theme animate__animated animate__fadeIn">
+  <body class="light-theme">
 
   <!--
     - #HEADER
@@ -106,7 +106,9 @@
       </div>
     </div>
 
-    <div class="hero-2"></div>
+    <div class="hero-2">
+      <div class="error-container"></div>
+    </div>
 
 
     <div class="latest">
@@ -114,31 +116,24 @@
         <div class="blog-slider">
           <h2 class="h2">Latest Blog Post</h2>
           <div class="slider">
+
+
             <div class="blog-card">
               <div class="blog-card-banner">
-                <img src="#" alt="james Gunn and Superman" class="blog-banner-img">
+                <img src="" alt="" class="blog-banner-img">
               </div>
               <div class="blog-content-wrapper">
-                <button class="blog-topic text-tiny">Upcoming</button>
-                <h3>
-                  <a href="#" class="h3">
-                    James Gunn is casting his new Superman
-                  </a>
-                </h3>
-                <p class="blog-text">
-                  This NoSQL database oriented to documents (by documents like JSON) combines some of the features from
-                  relational
-                  databases, easy to use and the multi-platform is the best option for scale up and have fault
-                  tolerance, load balancing,
-                  map reduce, etc.
-                </p>
+                <h3 class="h3"></h3>
+                <p class="blog-text"></p>
                 <div class="wrapper-flex">
                   <div class="wrapper">
-                    <a href="#" class="h4">Julia Walker</a>
-                    <p class="text-sm">
-                      <time datetime="2022-01-17">Jan 17, 2022</time>
-                      <span class="separator"></span>
-                    </p>
+                    <div class="btn-group">
+                      <a href="" class="btn btn-secondary"><span>READ STORY</span></a>
+                    </div>
+                    <div class="date-category-container">
+                      <p class="date"></p>
+                      <div class="categories-secondary"></div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -146,72 +141,23 @@
 
 
             <div class="blog-card">
-
               <div class="blog-card-banner">
-                <img src="#" alt="Fast web page loading on a $20 feature phone" width="250"
-                  class="blog-banner-img">
+                <img src="#" alt="" width="250" class="blog-banner-img">
               </div>
-
               <div class="blog-content-wrapper">
-
-                <button class="blog-topic text-tiny">Web Performance</button>
-
-                <h3><a href="" class="h3">Fast web page loading on a $20 feature phone</a></h3>
-
-                <p class="blog-text">
-                  Feature phones are affordable (under $20-25), low-end devices enabling 100s of millions of users in
-                  developing countries
-                  to leverage the web. Think of them as a light version of a smart phone.
-                </p>
-
+                <h3 class="h3"></h3>
+                <p class="blog-text"></p>
                 <div class="wrapper-flex">
-
                   <div class="wrapper">
-                    <a href="#" class="h4">Julia Walker</a>
-
-                    <p class="text-sm">
-                      <time datetime="2021-12-10">Dec 10, 2021</time>
-                      <span class="separator"></span>
-                    </p>
-                  </div>
-
-                </div>
-
-              </div>
-
-            </div>
-
-
-            <div class="blog-card">
-
-              <div class="blog-card-banner">
-                <img src="#" alt="Accessibility Tips for Web Developers" width="250"
-                  class="blog-banner-img">
-              </div>
-
-              <div class="blog-content-wrapper">
-
-                <button class="blog-topic text-tiny">Accessibility</button>
-
-                <h3><a href="" class="h3">Accessibility Tips for Web Developers</a></h3>
-
-                <p class="blog-text">
-                  It's awesome to build sites that are inclusive and accessible to everyone. There are at least six key
-                  areas of
-                  disability we can optimize for: visual, hearing, mobility, cognition, speech and neural. Many tools
-                  and resources can
-                  help here, even if you're totally new to web accessibility.
-                </p>
-
-                <div class="wrapper-flex">
-
-                  <div class="wrapper">
-                    <a href="#" class="h4">Julia Walker</a>
-
-                    <p class="text-sm">
-                      <time datetime="2021-11-28">Nov 28, 2021</time>
-                      <span class="separator"></span>
-                    </p>
+                    <div class="btn-group">
+                      <a href="" class="btn btn-secondary"><span>READ STORY</span></a>
+                    </div>
+                    <div class="date-category-container">
+                      <p class="date">${post.fields.Date}</p>
+                      <div class="categories-secondary">
+                        <p>${post.fields.Category}</p>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -219,39 +165,53 @@
 
 
             <div class="blog-card">
-
               <div class="blog-card-banner">
-                <img src="#" alt="Dynamically Securing Databases using Hashicorp Vault"
-                  width="250" class="blog-banner-img">
+                <img src="#" alt="" width="250" class="blog-banner-img">
               </div>
-
               <div class="blog-content-wrapper">
-
-                <button class="blog-topic text-tiny">Database</button>
-
-                <h3><a href="" class="h3">Dynamically Securing Databases using Hashicorp Vault</a></h3>
-
-                <p class="blog-text">
-                  Nowadays, it's hard to profoundly talk about security in the IT industry, since it has to be
-                  considered on so many
-                  different levels: from securing code chunks, securing containers, up to securing complex
-                  infrastructures and defining
-                  strong authorization and authentication policies across the enterprise.
-                </p>
-
+                <h3 class="h3"></h3>
+                <p class="blog-text"></p>
                 <div class="wrapper-flex">
-
                   <div class="wrapper">
-                    <a href="#" class="h4">Julia Walker</a>
+                    <div class="btn-group">
+                      <a href="" class="btn btn-secondary"><span>READ STORY</span></a>
+                    </div>
+                    <div class="date-category-container">
+                      <p class="date">${post.fields.Date}</p>
+                      <div class="categories-secondary">
+                        <p>${post.fields.Category}</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
 
-                    <p class="text-sm">
-                      <time datetime="2021-11-20">Nov 20, 2021</time>
-                      <span class="separator"></span>
-                    </p>
+
+            <div class="blog-card">
+              <div class="blog-card-banner">
+                <img src="#" alt="" width="250" class="blog-banner-img">
+              </div>
+              <div class="blog-content-wrapper">
+                <h3 class="h3"></h3>
+                <p class="blog-text"></p>
+                <div class="wrapper-flex">
+                  <div class="wrapper">
+                    <div class="btn-group">
+                      <a href="" class="btn btn-secondary"><span>READ STORY</span></a>
+                    </div>
+                    <div class="date-category-container">
+                      <p class="date">${post.fields.Date}</p>
+                      <div class="categories-secondary">
+                        <p>${post.fields.Category}</p>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
             </div> 
+
+
           </div>
         </div>
       </div>
@@ -274,56 +234,39 @@
       <div class="wrapper">
 
         <a href="#" class="footer-logo">
-          <img src="#" alt="DevBlog's Logo" width="150" height="40" class="logo-light">
-          <img src="#" alt="DevBlog's Logo" width="150" height="40" class="logo-dark">
+          <img src="#" alt="DevBlog's Logo" width="150" height="40">
         </a>
-
         <p class="footer-text">
-          Learn about Web accessibility, Web performance, and Database management.
+          At Chat Cinema,we delve into inclusive experiences and optimized performance.
         </p>
-
       </div>
 
       <div class="wrapper">
-
         <p class="footer-title">Quick Links</p>
-
         <ul>
-
           <li>
             <a href="about.html" class="footer-link">About Us</a>
           </li>
-
           <li>
             <a href="contact.html" class="footer-link">Contact Us</a>
           </li>
-
         </ul>
-
       </div>
 
       <div class="wrapper">
-
         <p class="footer-title">Legal Stuff</p>
-
         <ul>
-
           <li>
             <a href="#" class="footer-link">Privacy Notice</a>
           </li>
-
           <li>
             <a href="#" class="footer-link">Cookie Policy</a>
           </li>
-
           <li>
             <a href="#" class="footer-link">Terms Of Use</a>
           </li>
-
         </ul>
-
       </div>
-
     </div>
 
     <p class="copyright">
