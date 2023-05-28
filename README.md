@@ -118,20 +118,20 @@ Make sure you go through this checklist before submitting your project to Moodle
 - [ ] Details page URL includes a query param.
 - [#] My website makes a GET request to an API to get a list of results.
 - [#] My website makes a GET request to an API to get details of one result.
-- [ ] Input fields have the following attributes;
-  - [ ] A name,
-  - [ ] A placeholder,
-  - [ ] A aria-describedby,
-  - [ ] Required
+- [#] Input fields have the following attributes;
+  - [#] A name,
+  - [#] A placeholder,
+  - [#] A aria-describedby,
+  - [#] Required
 - [#] All images have an alt tag;
 - [#] I have not copied Javascript code.
 - [#] I have not used a Javascript library.
-- [ ] Removed all unused files.
+- [#] Removed all unused files.
 - [#] Named all images properly.
-- [ ] Committed all my code to github.
-- [ ] My repo is publically viewable.
+- [#] Committed all my code to github.
+- [#] My repo is publically viewable.
 - [ ] I've submitted/ written a report.
-- [ ] I've removed all todo notes in code.
+- [#] I've removed all todo notes in code.
 - [ ] I've removed all console logs in code.
 - [ ] Code is formatted correctly.
 - [ ] There are no red underlines in VSCode.
