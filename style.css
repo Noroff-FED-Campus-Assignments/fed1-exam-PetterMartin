@@ -961,3 +961,25 @@ body {
   }
 }
 
+/*-----------------------------------*\ 
+    #IMAGE MODAL
+\*-----------------------------------*/
+
+.click-image {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.click-image img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  max-height: 100%;
+}
