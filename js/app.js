@@ -256,107 +256,18 @@ function sortPostsByName(sortOrder) {
 
 
 
-async function loadPostImages() {
-  const detailsContainer = document.querySelector(".details-container");
-
-  if (detailsContainer) {
-    await getMovies();
-
-    const imageModal = document.querySelector(".click-image");
-    const postImages = document.querySelectorAll(".image-container");
-
-    postImages.forEach((image) => {
-      image.addEventListener("click", function () {
-        imageModal.innerHTML = this.innerHTML;
-        imageModal.showModal();
-        imageModal.addEventListener("click", () => {
-          imageModal.close();
-        });
+if (movieContainer) {
+  getMovies();
+  const imageModal = document.querySelector(".click-image");
+  const postImages = document.querySelectorAll(".image-container");
+  postImages.forEach((image) => {
+    image.addEventListener("click", function () {
+      imageModal.innerHTML = this.innerHTML;
+      imageModal.showModal();
+      imageModal.addEventListener("click", () => {
+        imageModal.close();
       });
     });
-  }
+  });
 }
-
-loadPostImages();
-
-
-
-
-
-/*
-<div class="flex-container">
-                <div class="right-2 right-3">
-                    <h1 class="h1">New Trailer for Christopher Nolan's new movie 'Oppenheimer'</h1>
-                    <p class="hero-text">Last summer, advertising photographer Jason Perry traveled to Ukraine to provide supplies for civilians amidst the Russian invasion. When travel challenges left him stranded in Amsterdam, his search for ground travel led him to Zeilen Van Vrijheid—a Dutch volunteer team with convoys of ambulances equipped with medical supplies to support doctors in Ukraine.</p>
-                   <div class="btn-group">
-                   <a href="details.html" class="btn btn-secondary"><span>READ STORY</span></a>
-                </div>
-                <div class="date-category-container">
-                    <p class="date">Jan 17, 2022</p>
-                    <div class="categories-secondary">
-                    <p>Trailers</p>
-                </div>
-            </div>
-          </div>
-          <div class="left-2">
-            <div class="image-container">
-              <img src="${post.fields.Attachments[0].url}" alt="Your Image" class="hero-image">
-            </div>
-          </div>
-          </div>
-
-/*
-============================================
-Constants
-@example: https://github.com/S3ak/fed-javascript1-api-calls/blob/main/examples/games.html#L66
-============================================
-*/
-
-// TODO: Get DOM elements from the DOM
-
-/*
-============================================
-DOM manipulation
-@example: https://github.com/S3ak/fed-javascript1-api-calls/blob/main/examples/games.html#L89
-============================================
-*/
-
-// TODO: Fetch and Render the list to the DOM
-
-// TODO: Create event listeners for the filters and the search
-
-/**
- * TODO: Create an event listener to sort the list.
- * @example https://github.com/S3ak/fed-javascript1-api-calls/blob/main/examples/search-form.html#L91
- */
-
-/*
-============================================
-Data fectching
-@example: https://github.com/S3ak/fed-javascript1-api-calls/blob/main/examples/games.html#L104
-============================================
-*/
-
-// TODO: Fetch an array of objects from the API
-
-/*
-============================================
-Helper functions
-https://github.com/S3ak/fed-javascript1-api-calls/blob/main/examples/games.html#L154
-============================================
-*/
-
-/**
- * TODO: Create a function to filter the list of item.
- * @example https://github.com/S3ak/fed-javascript1-api-calls/blob/main/examples/search-form.html#L135
- * @param {item} item The object with properties from the fetched JSON data.
- * @param {searchTerm} searchTerm The string used to check if the object title contains it.
- */
-
-/**
- * TODO: Create a function to create a DOM element.
- * @example https://github.com/S3ak/fed-javascript1-api-calls/blob/main/src/js/detail.js#L36
- * @param {item} item The object with properties from the fetched JSON data.
- */
-
 
