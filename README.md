@@ -13,11 +13,11 @@ This project was bootstrapped with Vite.
 <!-- You must replace these links -->
 
 - [Brief](https://fed-vocational-astro-course.vercel.app/en/exam-1/brief)
-- [Design](_LINK_TO_FIGMA_)
-- [Production deploy](_LINK_TO_WEBSITE_)
-- [Deployment CI](_LINK_TO_NETLIFY_VERCEL_DASHBOARD_)
-- [API Docs](_LINK_TO_API_DOCS_)
-- [API Endpoint](_LINK_TO_API_DOC)
+- [Design](https://www.figma.com/file/BhOoBxwpXgrnMk7Hu1LQXz/Movie-Blog?type=design&node-id=0%3A1&t=trlcyAHWsSF9JsTw-1)
+- [Production deploy](https://euphonious-semifreddo-98940e.netlify.app/)
+- [Deployment CI](https://app.netlify.com/sites/euphonious-semifreddo-98940e/deploys?filter=master)
+- [API Docs](https://airtable.com/developers/web/api/introduction)
+- [API Endpoint](https://api.airtable.com/v0/appMZLXTCpDmiDkTh/tblnutZCCuHLWanGx)
 
 ## Deployment
 
