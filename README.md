@@ -10,8 +10,6 @@ This project was bootstrapped with Vite.
 
 ## Resources
 
-<!-- You must replace these links -->
-
 - [Brief](https://fed-vocational-astro-course.vercel.app/en/exam-1/brief)
 - [Design](https://www.figma.com/file/BhOoBxwpXgrnMk7Hu1LQXz/Movie-Blog?type=design&node-id=0%3A1&t=trlcyAHWsSF9JsTw-1)
 - [Production deploy](https://euphonious-semifreddo-98940e.netlify.app/)
@@ -28,7 +26,41 @@ YOu can update your deployment pipeling by editing the [vercel.json](https://ver
 
 ## Report
 
-_ADD_YOUR_REPORT_HERE_
+ 1. Introduction
+For this project, I decided to create a movie blog website called "Chat Cinema." As a movie enthusiast, I found it exciting to build a website around my passion. The name "Chat Cinema" reflects the idea of a platform where people can gather and discuss movies.
+
+I aimed for an old-school aesthetic with a modern twist, reminiscent of classic newspapers like "The Godfather" or "The French Connection." To achieve this vibe, I used muted colors such as beige, dark grey, and black.
+
+The header design was intended to occupy a significant portion of the screen, resembling the prominence of a newspaper. The logo I designed combines elements of a camera lens and the iconic countdown introduction seen in old movies.
+
+Although the chosen font, Alef, doesn't inherently evoke an old-school feel, I felt it provided a modern and clean touch to the website. The button design was inspired by Gjensidige's recent commercial, which caught my attention due to its appealing look.
+
+The categories section allows users to search for blogs based on different categories like reviews and upcoming movies. The search icon enables users to search for specific headlines in ascending or descending order.
+
+The top advertisement is strategically placed to capture users' attention upon visiting the page. It is specifically tailored to movie enthusiasts, offering discounts on movies, thereby generating immediate interest and encouraging subscriptions.
+
+The hero image, like the header, occupies a significant portion of the screen and showcases the most important movie story of the moment, enticing users to read further. The blog layout itself is kept simple, avoiding a boxed-in feel. A line at the end of each blog indicates the current blog being read. The "My Posts" section is a placeholder for where users' own posts would appear.
+
+Although my Figma design differed slightly from the final webpage, I found myself preferring the version I coded. The Figma design lacked intricate details because I am eager to start coding right away, though I acknowledge the need to improve my patience and focus on the design phase. I find my creativity flows better during coding rather than during Figma editing.
+
+During the assignment, I extensively researched various blogs, focusing particularly on movie blogs, to gather ideas about design elements and categories. However, most of the design elements I incorporated were inspired by different blogs related to food, travel, and fashion.
+
+ 2. Conclusion 
+
+This exam was both enjoyable and challenging. While I recognize that I may never be completely satisfied with my design, it is part of the creative process. I have acquired valuable knowledge throughout this experience and now feel confident in creating my own API and fetching data. JavaScript has become more familiar and comfortable for me, and I have gained confidence in my coding abilities.
+
+ 3. References
+The images used in this project were sourced from https://www.imdb.com/.
+
+Inspirational images and websites that influenced my design were obtained from https://dribbble.com/.
+
+
+
+
+
+
+
+
 
 ## Getting Started
 
