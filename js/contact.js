@@ -1,30 +1,58 @@
-/*
-============================================
-Constants
-@example: https://github.com/S3ak/fed-javascript1-api-calls/blob/main/examples/advanced-form.html#L50
-============================================
-*/
-
-// TODO: Get DOM elements from the DOM
-
-// TODO: Create event listeners for the form
-
-/*
-============================================
-API calls
-@example: https://github.com/S3ak/fed-javascript1-api-calls/blob/main/examples/advanced-form.html#L157
-============================================
-*/
-
-// TODO: Set up a function to fetch data from the API
-
-/*
-============================================
-Helper functions
-@example: https://github.com/S3ak/fed-javascript1-api-calls/blob/main/examples/advanced-form.html#L118
-============================================
-*/
-
-// TODO: Create a function to validate an input field
-
-// TODO: Create a function to create a DOM element
+window.addEventListener("load", () => {
+    const loader = document.querySelector(".loader");
+  
+    loader.classList.add("loader--hidden");
+  
+    loader.addEventListener("transitionend", () => {
+      document.body.removeChild(loader);
+    });
+  });
+  
+  function validateForm() {
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const subject = document.getElementById("subject").value;
+    const message = document.getElementById("message").value;
+  
+    let valid = true;
+    if (name === "") {
+      valid = false;
+      alert("Please enter your name.");
+    }
+    if (subject.length < 10) {
+      valid = false;
+      alert("Subject must be at least 10 characters long.");
+    }
+    if (message.length < 25) {
+      valid = false;
+      alert("Message must be at least 25 characters long.");
+    }
+    if (!validateEmail(email)) {
+      valid = false;
+      alert("Please enter a valid email address.");
+    }
+  
+    return valid;
+  }
+  
+  function validateEmail(email) {
+    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return re.test(String(email).toLowerCase());
+  }
+  
+  const form = document.querySelector("form");
+  const message = document.createElement("p");
+  message.classList.add("success-message");
+  const contactBox = document.querySelector(".contact-box");
+  const contactContainer = document.querySelector(".contact-container");
+  
+  form.addEventListener("submit", function (event) {
+    event.preventDefault();
+  
+    if (validateForm()) {
+      message.textContent =
+        "Thank You For Your Submission! We Will Reply To You Within 14 Days";
+      form.reset();
+      contactContainer.insertBefore(message, contactBox.nextSibling);
+    }
+  });
