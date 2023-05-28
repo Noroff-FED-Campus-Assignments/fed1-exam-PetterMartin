@@ -50,7 +50,7 @@ All of these todo's must be done to pass the asssignment.
 - [#] As a customer I can view validation message when they input an incorrect Email address.
 - [#] As a customer I can view a validation message when they input an incorrect physical address that is less than 25 characters long.
 - [#] As a customer I want to be able to view the latest blog posts on the home page.
-- [ ] As a customer, I want to see a list of the first 10 blog posts on the blog section, so that I can quickly scan through the content and decide which posts I want to read.
+- [#] As a customer, I want to see a list of the first 10 blog posts on the blog section, so that I can quickly scan through the content and decide which posts I want to read.
 - [#] As a customer I want to be able to view a list of all blog posts on the blog section.
 - [#] As a customer I want A responsive website that can be As a customer, I want to ensure that the website is responsive and accessible so that I can access it on any device and easily navigate through it using any accessibility tools I need.
 - [#] As a customer, I want to see a clear and visually appealing design on the website, so that I can easily read the content and engage with the website.
@@ -111,23 +111,23 @@ All of these todo's must be done to pass the asssignment.
 
 Make sure you go through this checklist before submitting your project to Moodle.
 
-- [ ] All pages have a meta description.
-- [ ] All pages have a valid title.
-- [ ] All pages import the correct css files.
-- [ ] All pages import the correct JS file.
+- [#] All pages have a meta description.
+- [#] All pages have a valid title.
+- [#] All pages import the correct css files.
+- [#] All pages import the correct JS file.
 - [ ] Details page URL includes a query param.
-- [ ] My website makes a GET request to an API to get a list of results.
-- [ ] My website makes a GET request to an API to get details of one result.
+- [#] My website makes a GET request to an API to get a list of results.
+- [#] My website makes a GET request to an API to get details of one result.
 - [ ] Input fields have the following attributes;
-- [ ] All images have an alt tag;
   - [ ] A name,
   - [ ] A placeholder,
   - [ ] A aria-describedby,
   - [ ] Required
-- [ ] I have not copied Javascript code.
-- [ ] I have not used a Javascript library.
+- [#] All images have an alt tag;
+- [#] I have not copied Javascript code.
+- [#] I have not used a Javascript library.
 - [ ] Removed all unused files.
-- [ ] Named all images properly.
+- [#] Named all images properly.
 - [ ] Committed all my code to github.
 - [ ] My repo is publically viewable.
 - [ ] I've submitted/ written a report.
@@ -157,5 +157,5 @@ Make sure you go through this checklist before submitting your project to Moodle
 
 ## Authors
 
-- _YOURE_NAME_ (@_your_github_username_)
+- Petter Martin Ånderbakk (@PetterMartin)
 - Monde Sineke (@S3ak)

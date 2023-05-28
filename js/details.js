@@ -39,7 +39,7 @@ async function getPost() {
 
         <div class="image-section">
           <div class="image-container">
-            <img src="${result.fields.Attachments[1].url}" alt="">
+            <img src="${result.fields.Attachments[1].url}" alt="${result.fields["Title"]}">
           </div>
         </div>
 

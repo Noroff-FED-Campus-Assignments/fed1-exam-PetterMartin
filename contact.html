@@ -5,15 +5,18 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cinema Chat Contact</title>
+  <meta name="description" content="Contact our team for any inquiries, suggestions, or collaborations. We are here to answer your questions and provide assistance regarding our movie blog. Feel free to reach out to us through the contact form or provided contact details." />
+  <title>Cinema Chat | Contact</title>
   <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Alef&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/27c52b5e1c.js" crossorigin="anonymous"></script>
+  <link rel="icon" href="Images/Logo-Circle.png" type="image/x-icon">
+  <link rel="shortcut icon" href="Images/Logo-Circle.png" type="image/x-icon">
 </head>
 
-<body class="light-theme">
+<body>
 
   <!--
     - #HEADER
@@ -22,6 +25,7 @@
 
     <div class="header-top">
       <div class="header-left">
+        <i class="fa-solid fa-film"></i>
         <p>Movie Blog</p>
       </div>
       <div class="header-center">
@@ -36,45 +40,17 @@
     </div>
 
     <div class="header-section">
-      <div class="header-section-left categories-primary">
-        <i class="fa-solid fa-film"></i>
-        <p>Movie</p>
-        <p>TV</p>
-        <p>Streaming</p>
+      <div class="header-section-left">
+        <img src="Images/Logo.png" alt="Chat Cinemas Logo">
       </div>
       <div class="header-section-center">
-        <a href="index.html">
-          <h2>Chat</h2>
-        </a>
+        <a href="index.html"><h1>CINEMA</h1></a>
       </div>
       <div class="header-section-right categories-primary">
         <i class="fa-solid fa-magnifying-glass"></i>
         <i class="fa-regular fa-user"></i>
         <p>My Posts</p>
       </div>
-    </div>
-
-    <div class="header-section-2">
-      <div class="header-section-2-left">
-        <p>Adventures and the<br>friends that came along<br>for the ride</p>
-      </div>
-      <div class="header-section-2-center">
-        <h1>CINEMA</h1>
-      </div>
-      <div class="header-section-2-right">
-        <!-- Add your picture here -->
-      </div>
-    </div>
-
-    <div class="categories categories-primary">
-      <p>Upcoming</p>
-      <p>Reviews</p>
-      <p>Trailers</p>
-      <p>behind the scenes</p>
-      <p>Interviews</p>
-      <p>Posters</p>
-      <p>events</p>
-      <p>Merchendise</p>
     </div>
     
   </header>
@@ -85,19 +61,19 @@
       <form>
         <div class="form-group">
           <label for="name">Full Name</label>
-          <input type="text" id="name" name="name" required>
+          <input type="text" id="name" name="name" required aria-describedby="name-description">
         </div>
         <div class="form-group">
           <label for="email">E-mail</label>
-          <input type="email" id="email" name="email" required>
+          <input type="email" id="email" name="email" required aria-describedby="email-description">
         </div>
         <div class="form-group">
           <label for="subject">Subject</label>
-          <input type="text" id="subject" name="subject" required>
+          <input type="text" id="subject" name="subject" required aria-describedby="subject-description">
         </div>
         <div class="form-group">
           <label for="message">Message</label>
-          <textarea id="message" name="message" rows="5" required></textarea>
+          <textarea id="message" name="message" rows="5" required aria-describedby="message-description"></textarea>
         </div>
         <button type="submit">Send Message</button>
       </form>
@@ -127,15 +103,17 @@
   <footer>
 
     <div class="container">
+
       <div class="wrapper">
+
         <a href="#" class="footer-logo">
-          <img src="./assets/images/logo-light.svg" alt="DevBlog's Logo" width="150" height="40" class="logo-light">
-          <img src="./assets/images/logo-dark.svg" alt="DevBlog's Logo" width="150" height="40" class="logo-dark">
+          <img src="Images/Logo.png" alt="Chat Cinemas Logo" width="150">
         </a>
         <p class="footer-text">
-          Learn about Web accessibility, Web performance, and Database management.
+          At Chat Cinema,we delve into inclusive experiences and optimized performance.
         </p>
       </div>
+
       <div class="wrapper">
         <p class="footer-title">Quick Links</p>
         <ul>
@@ -163,6 +141,7 @@
         </ul>
       </div>
     </div>
+
     <p class="copyright">
       &copy; Copyright 2022</a>
     </p>

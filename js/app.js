@@ -109,22 +109,14 @@ function filterPostsByCategory(category) {
 
   // Add the active class to the selected category button
   const selectedButton = document.querySelector(`.categories-primary p[data-category="${category}"]`);
-  selectedButton.classList.add('active');
+  if (selectedButton) {
+    selectedButton.classList.add('active');
+  }
 
   if (category === 'All') {
     heroSection.style.display = 'block';
   } else {
     heroSection.style.display = 'none';
-  }
-
-  // Hide the "Latest" div
-  const latestDiv = document.querySelector('.latest');
-  latestDiv.style.display = 'none';
-
-  // Remove the "show more" button
-  const showMoreButton = document.getElementById('showMoreButton');
-  if (showMoreButton) {
-    showMoreButton.style.display = 'none';
   }
 }
 
@@ -152,7 +144,7 @@ async function getMovies() {
       <div class="${postReverse} text">
       <div class="${imageContainerClass}">
         <div class="image-container">
-          <img src="${post.fields.Attachments[0].url}" alt="Your Image" class="hero-image">
+          <img src="${post.fields.Attachments[0].url}" alt="${post.fields["Title"]}" class="hero-image">
         </div>
       </div>
       <div class="text ${rightContainerClass}">
@@ -220,7 +212,6 @@ async function getMovies() {
 
     filterPostsByCategory(selectedCategory);
   } catch (error) {
-    console.log(error);
     errorContainer.innerHTML = 'An error occurred while loading the movies. Please try again later.';
   }
 }
