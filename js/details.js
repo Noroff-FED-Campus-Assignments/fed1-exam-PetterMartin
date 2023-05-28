@@ -56,7 +56,7 @@ async function getPost() {
 }
 
 if (detailsContainer) {
-  await getPost();
+  getPost();
   const imageModal = document.querySelector(".click-image");
   const postImages = document.querySelectorAll(".image-container");
   postImages.forEach((image) => {
