@@ -26,6 +26,8 @@ YOu can update your deployment pipeling by editing the [vercel.json](https://ver
 
 ## Report
 
+
+
  1. Introduction
 For this project, I decided to create a movie blog website called "Chat Cinema." As a movie enthusiast, I found it exciting to build a website around my passion. The name "Chat Cinema" reflects the idea of a platform where people can gather and discuss movies.
 
@@ -53,6 +55,11 @@ This exam was both enjoyable and challenging. While I recognize that I may never
 The images used in this project were sourced from https://www.imdb.com/.
 
 Inspirational images and websites that influenced my design were obtained from https://dribbble.com/.
+
+ 4. Acknowledgements
+
+My Hotjar data showed a lot of activity going to the main hero page and the ad at the top of my page which was my main goal. 
+
 
 
 
